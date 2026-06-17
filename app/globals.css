@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* ── Fuentes ─────────────────────────────────── */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ── Colores primarios de marca ──────────────── */
+  --color-azul-marino:  #003366;
+  --color-azul-claro:   #6CA1D5;
+  --color-dorado:       #D4AF37;
+  --color-beige:        #F5F2ED;
+  --color-crema:        #E3D5BD;
+  --color-black-soft:   #2D2D2D;
+  --color-black-pure:   #000000;
+  --color-white-pure:   #FFFFFF;
+
+  /* ── Botones ─────────────────────────────────── */
+  --color-btn-bg-primary: #003366;
+
+  /* ── Fondos ──────────────────────────────────── */
+  --color-bg-beige: #F5F2ED;
+  --color-bg-hover-red:          #FFF6F4;
+  --color-bg-gray-blue:          #DDE1E2;
+  --color-bg-light:              #FEFDFB;
+  --color-bg-white-transparent:  rgba(255,255,255,0.50);
+  --color-bg-green-success-light:#DBFBD1;
+  --color-bg-orange-hover-soft:  #FBF0E9;
+  --color-bg-azul-claro:         #6CA1D5;
+  --bg-linear-dark: linear-gradient(180deg, #342E2E 0%, #2D2D2D 100%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bg-light);
+  color: var(--color-black-soft);
   font-family: Arial, Helvetica, sans-serif;
 }
