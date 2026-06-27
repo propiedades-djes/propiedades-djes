@@ -2,8 +2,7 @@
 
 @theme inline {
   /* ── Fuentes ─────────────────────────────────── */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-satoshi);
 
   /* ── Colores primarios de marca ──────────────── */
   --color-azul-marino:  #003366;
@@ -33,5 +32,6 @@
 body {
   background: var(--color-bg-light);
   color: var(--color-black-soft);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 300;
 }
