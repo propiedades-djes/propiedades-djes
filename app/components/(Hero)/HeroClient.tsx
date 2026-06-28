@@ -28,13 +28,45 @@ export default function HeroClientPage() {
   const { videoTerminado, setVideoTerminado } = useIntro()
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full min-h-[calc(100vh+80px)] md:min-h-screen">
 
       {/* Video de fondo */}
       <HeroVideo onVideoEnd={() => setVideoTerminado(true)} />
 
       {/* Overlay para contraste de texto */}
       <div className="absolute inset-0 bg-black/0" />
+
+      {/* Nubes */}
+      <div className="absolute -bottom-20 md:bottom-0 left-0 w-full z-20 pointer-events-none leading-0">
+
+          <motion.div
+            animate={videoTerminado ? "show" : "hidden"} 
+            variants={fadeUp}
+            className="">
+                <Image
+                src="/hero/Hero_nubes_mobile.svg"
+                alt=""
+                width={390}
+                height={120}
+                className="block w-full md:hidden"
+                priority
+              />
+          </motion.div>
+
+          <motion.div
+            animate={videoTerminado ? "show" : "hidden"}
+            variants={fadeUp}
+            className="">
+                <Image
+                src="/hero/Hero_nubes_desktop.png"
+                alt=""
+                width={1440}
+                height={160}
+                className="hidden w-full md:block"
+                priority
+              />
+          </motion.div>
+      </div>
 
       <motion.div
             animate={videoTerminado ? "show" : "hidden"}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence, type Variants } from "framer-motion"
 import Link from "next/link"
 import { useIntro } from "@/app/context/IntroContext"
@@ -33,14 +33,26 @@ export default function NavbarClient() {
   const [menuOpen, setMenuOpen] = useState(false)
   const { videoTerminado } = useIntro()
 
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(()=>{
+
+    const handleScroll = ()=>{
+      setScrolled(window.scrollY > 0)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return ()=> window.removeEventListener("scroll", handleScroll)
+  },[])
+
   return (
     <motion.header
       variants={navVariants}
       initial="hidden"
       animate={videoTerminado ? "show" : "hidden"}
-      className="fixed top-0 left-0 right-0 z-50"
-    >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      className={`${scrolled ? "bg-white shadow-md" : ""} fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-300`}>
+
+      <nav className={`w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between`}>
         {/* Logo */}
         <Link href="/" className="text-azul-marino font-bold text-sm tracking-widest">
           PROPIEDADES D-JES
@@ -92,7 +104,7 @@ export default function NavbarClient() {
           <motion.span
             animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.2 }}
-            className="block w-6 h-0.5 bg-white"
+            className={`block w-6 h-0.5 ${scrolled ? "bg-azul-marino" : "bg-white"}`}
           />
           <motion.span
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
