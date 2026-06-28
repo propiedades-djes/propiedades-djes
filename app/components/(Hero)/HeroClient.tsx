@@ -6,8 +6,9 @@ import HeroVideo from "./hero-video"
 import { useIntro } from "@/app/context/IntroContext"
 
 const container: Variants = {
-  hidden: {},
+  hidden: { opacity: 0 },
   show: {
+    opacity: 1,
     transition: {
       staggerChildren: 0.2,
     },
