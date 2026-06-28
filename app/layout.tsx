@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/(Navbar)/Navbar";
 import { IntroProvider } from "./context/IntroContext";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const satoshi = localFont({
   src: [
@@ -35,6 +36,7 @@ export default function RootLayout({
           <IntroProvider>
             <Navbar />
             {children}
+            <SpeedInsights />
           </IntroProvider>
         </body>
     </html>
