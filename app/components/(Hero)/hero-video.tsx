@@ -13,6 +13,7 @@ export default function HeroVideo({onVideoEnd}: Props){
         onEnded={onVideoEnd}
         className="hidden md:block absolute inset-0 w-full h-full object-cover"
         src="/hero/hero-desktop.mp4"
+        poster="/hero/hero_img_desktop.svg"
         autoPlay
         muted
         playsInline
@@ -23,6 +24,7 @@ export default function HeroVideo({onVideoEnd}: Props){
         onEnded={onVideoEnd}
         className="block md:hidden absolute inset-0 w-full h-full object-cover"
         src="/hero/hero-mobile.mp4"
+        poster="/hero/hero_img_mobile.svg"
         autoPlay
         muted
         playsInline
