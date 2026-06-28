@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, AnimatePresence, type Variants } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import Image from "next/image"
 import HeroVideo from "./hero-video"
 import { useIntro } from "@/app/context/IntroContext"
@@ -35,13 +35,10 @@ export default function HeroClientPage() {
       {/* Overlay para contraste de texto */}
       <div className="absolute inset-0 bg-black/0" />
 
-      <AnimatePresence>
-        {videoTerminado && (
-          <motion.div
-            key="hero-content"
+      <motion.div
+            animate={videoTerminado ? "show" : "hidden"}
             variants={container}
             initial="hidden"
-            animate="show"
             className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6"
           >
             {/* Textos agrupados */}
@@ -104,9 +101,7 @@ export default function HeroClientPage() {
             >
               {/* scroll-arrow placeholder */}
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </motion.div>
 
     </div>
   )
