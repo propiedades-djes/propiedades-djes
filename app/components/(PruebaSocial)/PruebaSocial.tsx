@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeUpOnScroll from "../animation/FadeUpOnScroll";
 import AnimatedNumber from "./AnimatedNumber";
 
@@ -38,7 +39,23 @@ const stats = [
 
 export default function PruebaSocial() {
   return (
-    <section className="bg-beige py-12 px-6">
+    <section className="relative bg-beige py-12 px-6">
+      <Image
+        src="/resources/nube.svg"
+        alt=""
+        width={230}
+        height={163}
+        className="absolute top-20 right-10 opacity-60 pointer-events-none select-none w-32 md:w-40 lg:w-56"
+        aria-hidden
+      />
+      <Image
+        src="/resources/nube.svg"
+        alt=""
+        width={230}
+        height={163}
+        className="hidden lg:block absolute bottom-5 left-16 opacity-60 pointer-events-none select-none w-32 md:w-40 lg:w-56"
+        aria-hidden
+      />
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-12">
           <div className="text-center mb-8 flex flex-col items-center justify-center gap-4">
             <FadeUpOnScroll>
