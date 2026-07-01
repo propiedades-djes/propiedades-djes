@@ -26,7 +26,7 @@ export default function Beneficios() {
       <div className="max-w-6xl mx-auto flex flex-col gap-16 px-2">
 
         <FadeUpOnScroll>
-          <h2 className="text-center text-white-pure font-bold text-3xl md:text-4xl">
+          <h2 className="text-center text-white-pure font-bold text-3xl md:text-4xl lg:text-5xl">
             ¿Por qué elegir PROPIEDADES D-JES?
           </h2>
         </FadeUpOnScroll>
@@ -39,17 +39,17 @@ export default function Beneficios() {
                   <Image
                     src="/icons/ave.svg"
                     alt=""
-                    width={28}
-                    height={28}
+                    width={38}
+                    height={38}
                     className="shrink-0 mt-1"
                     aria-hidden
                   />
-                  <h3 className="text-white-pure font-bold text-lg leading-tight">
+                  <h3 className="text-white-pure font-bold text-lg leading-tight md:text-xl">
                     {b.titulo}
                   </h3>
                 </div>
                 <hr className="border-white/40" />
-                <p className="text-white-pure/80 text-sm leading-relaxed">
+                <p className="text-white-pure/80 text-sm leading-relaxed md:text-base">
                   {b.descripcion}
                 </p>
               </div>

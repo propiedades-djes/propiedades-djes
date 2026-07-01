@@ -54,7 +54,7 @@ export default function Servicios() {
             <FadeUpOnScroll>
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 bg-azul-marino text-white-pure px-7 py-3.5 rounded-full text-sm font-semibold mt-2 hover:bg-azul-marino/85 transition-colors w-fit"
+                className="inline-flex items-center gap-2 bg-azul-marino text-white-pure px-5 py-3.5 rounded-full text-sm font-semibold mt-2 hover:bg-azul-marino/85 transition-colors w-fit"
               >
                 Encuentra tu Inversión Segura →
               </a>
@@ -72,9 +72,9 @@ export default function Servicios() {
               <Image
                 src="/resources/paloma-imagen.svg"
                 alt="Paloma sosteniendo llaves de una propiedad"
-                width={290}
-                height={290}
-                className="shrink-0 w-72.5 h-72.5 lg:w-92.5 xl:w-100 lg:h-100 xl:h-112"
+                width={502}
+                height={338}
+                className="shrink-0 w-72.5 h-auto lg:w-92.5 xl:w-100"
               />
             </div>
           </FadeUpOnScroll>
@@ -103,7 +103,7 @@ export default function Servicios() {
                 href="https://wa.me/573001234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 border border-azul-marino text-white bg-azul-marino px-7 py-3.5 rounded-full font-semibold mt-2 hover:bg-azul-marino/10 transition-colors w-fit"
+                className="inline-flex items-center gap-3 border border-azul-marino text-white bg-azul-marino px-5 py-3.5 rounded-full font-semibold mt-2 hover:bg-azul-marino/10 transition-colors w-fit"
               >
                 <Image
                   src="/icons/WhatsApp-Icon.svg"

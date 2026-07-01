@@ -21,7 +21,7 @@ const stats = [
 
 export default function BeneficiosStats() {
   return (
-    <div className="bg-crema flex flex-col md:flex-row">
+    <div className="bg-beige flex flex-col md:flex-row">
       {stats.map((s) => (
         <div key={s.label} className="md:flex-1">
             <div className={`${s.bg} md:rounded-b-3xl py-10 px-6 flex flex-col items-center justify-center gap-5 text-center`}>

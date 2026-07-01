@@ -104,7 +104,7 @@ export default function HeroClientPage() {
                   alt=""
                   width={25}
                   height={26}
-                  className="w-6 h-6 shrink-0"
+                  className="w-[25px] h-[26px] shrink-0"
                   aria-hidden="true"
                 />
                 Agenda tu Consulta
