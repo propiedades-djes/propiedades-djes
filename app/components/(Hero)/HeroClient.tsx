@@ -49,7 +49,6 @@ export default function HeroClientPage() {
                 width={390}
                 height={120}
                 className="block w-full md:hidden"
-                priority
               />
           </motion.div>
 
@@ -63,7 +62,6 @@ export default function HeroClientPage() {
                 width={1440}
                 height={160}
                 className="hidden w-full md:block"
-                priority
               />
           </motion.div>
       </div>
@@ -121,6 +119,7 @@ export default function HeroClientPage() {
                   alt=""
                   width={24}
                   height={24}
+                  className="w-6 h-6"
                   aria-hidden="true"
                 />
                 Ver Propiedades

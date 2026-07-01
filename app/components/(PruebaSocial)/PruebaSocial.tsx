@@ -39,7 +39,7 @@ const stats = [
 
 export default function PruebaSocial() {
   return (
-    <section className="relative bg-beige py-12 px-6">
+    <section className="relative bg-beige py-12 md:py-20 px-6">
       <Image
         src="/resources/nube.svg"
         alt=""
@@ -59,13 +59,13 @@ export default function PruebaSocial() {
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-12">
           <div className="text-center mb-8 flex flex-col items-center justify-center gap-4">
             <FadeUpOnScroll>
-              <h2 className="text-azul-marino font-bold text-2xl md:text-4xl lg:text-6xl italic">
+              <h2 className="text-azul-marino font-bold text-3xl md:text-4xl lg:text-6xl italic">
                 Tu casa en las mejores manos
               </h2>
             </FadeUpOnScroll>
 
             <FadeUpOnScroll>
-              <p className="text-azul-marino text-base md:text-lg font-semibold mt-2">
+              <p className="text-azul-marino text-sm md:text-lg font-semibold mt-2">
                 Nuestros resultados hablan por nosotros
               </p>
             </FadeUpOnScroll>
